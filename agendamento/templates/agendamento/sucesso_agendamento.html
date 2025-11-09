@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="container mt-5">
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Agendamento Realizado com Sucesso! 🎉</h4>
+        <p>Seu agendamento foi registrado e será processado pela Cooperativa/Ponto de Coleta.</p>
+        <hr>
+        <p class="mb-0">Aguarde a confirmação e as informações adicionais. Obrigado por ajudar o meio ambiente!</p>
+    </div>
+    
+    <div class="mt-4">
+        <a href="{% url 'dashboard' %}" class="btn btn-primary">Ir para o Dashboard</a>
+        <a href="{% url 'agendamento:lista_agendamentos' %}" class="btn btn-secondary">Ver Meus Agendamentos</a>
+    </div>
+</div>
+{% endblock %}

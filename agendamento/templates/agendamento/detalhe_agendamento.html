@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <div class="card shadow-lg border-primary">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Detalhes do Agendamento #{{ agendamento.pk }}</h4>
+        </div>
+
+        <div class="card-body">
+
+            <h5>
+                Status Atual: 
+                {% if agendamento.status == 'AGENDADO' %}
+                    <span class="badge bg-success">{{ agendamento.get_status_display }}</span>
+                {% elif agendamento.status == 'CANCELADO' %}
+                    <span class="badge bg-danger">{{ agendamento.get_status_display }}</span>
+                {% else %}
+                    <span class="badge bg-secondary">{{ agendamento.get_status_display }}</span>
+                {% endif %}
+                    
+            </h5>
+             
+            <hr>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>📅 Detalhes da Coleta</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Cooperativa:</strong> {{ agendamento.cooperativa.nome }}</li>
+                        <li class="list-group-item"><strong>Endereço:</strong> {{ agendamento.endereco }}</li>
+                        <li class="list-group-item"><strong>Bairro:</strong> {{ agendamento.bairro }}</li>
+                        <li class="list-group-item"><strong>Agendado para:</strong> {{ agendamento.data|date:"d/m/Y" }} às {{ agendamento.hora|time:"H:i" }}</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h6>👤 Informações do Usuário</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Nome:</strong> {{ agendamento.nome }}</li>
+                        <li class="list-group-item"><strong>E-mail:</strong> {{ agendamento.email }}</li>
+                        <li class="list-group-item"><strong>Observação:</strong> {{ agendamento.observacao|default:"Nenhuma." }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer d-flex justify-content-between">
+            <a href="{% url 'agendamento:lista_agendamentos' %}" class="btn btn-secondary">Voltar para Lista</a>
+            
+            {% if agendamento.status == 'AGENDADO' %}
+                <form method="post" action="{% url 'agendamento:cancelar_agendamento' pk=agendamento.pk %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja cancelar este agendamento?');">
+                        Cancelar Agendamento
+                    </button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

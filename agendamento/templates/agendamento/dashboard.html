@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <h1>Olá, {{ request.user.nome|default:request.user.email }}! 👋</h1>
+    <p>Bem-vindo ao seu painel de controle. Seu bairro cadastrado para serviços de coleta é: <strong>{{ request.user.bairro|default:"Não definido" }}</strong>.</p>
+    <hr>
+
+    <div class="row">
+        
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Agendar Nova Coleta ♻️</h5>
+                    <p class="card-text">Verifique os Pontos de Coleta e Cooperativas disponíveis no seu bairro e agende o seu serviço.</p>
+                    <a href="{% url 'agendamento:agendar_coleta' %}" class="btn btn-success">Agendar Agora</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-info">
+                <div class="card-body">
+                    <h5 class="card-title text-info">Histórico e Lista 🗓️</h5>
+                    <p class="card-text">Veja todos os seus agendamentos passados e futuros e verifique o status de cancelamento.</p>
+                    <a href="{% url 'agendamento:lista_agendamentos' %}" class="btn btn-info">Ver Lista de Agendamentos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+            <h2 class="mt-4">Próximos Agendamentos</h2>
+            {% if agendamentos_futuros %}
+                <ul class="list-group">
+                    {% for agendamento in agendamentos_futuros %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Coleta em **{{ agendamento.data|date:"d/m/Y" }}** às **{{ agendamento.hora|time:"H:i" }}**
+                            <span class="badge bg-primary rounded-pill">{{ agendamento.bairro }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="alert alert-info">
+                    Você não possui agendamentos futuros.
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

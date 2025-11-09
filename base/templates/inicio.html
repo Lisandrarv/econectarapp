@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block conteudo %}
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+        <div class="container" img src="{% static 'assets/img/fundo-banner.jpg' %}" alt="Imagem ilustrativa" class="img-fluid rounded">
+            <h1 class="display-4 fst-italic">Econectar</h1>
+            <p class="lead my-3">Reciclagem inteligente que ajuda o meio ambiente e a sociedade ligando você aos grupos de coleta para o devido descarte de seu lixo.</p>
+            <button class="btn btn-primary text-body-emphasis" type="button">Saiba Mais</button>
+        </div>
+    </div>
+</div>
+
+{% for dado in dados %}
+<div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column">
+        <h3 class="mb-0">{{ dado.titulo }}</h3>
+        <p class="align-items-end">{{ dado.descricao }}</p>
+        <a href="{{ dado.link }}" class="align-items-end">Clique aqui</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

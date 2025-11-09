@@ -1,0 +1,18 @@
+Olá, {{ usuario_nome }}!
+
+Seu agendamento de coleta foi CONFIRMADO com sucesso!
+
+Detalhes do Agendamento #{{ agendamento.pk }}:
+
+- Data e Hora: {{ agendamento.data|date:"d/m/Y" }} às {{ agendamento.hora|time:"H:i" }}
+- Cooperativa: {{ agendamento.cooperativa.nome }}
+- Endereço de Coleta: {{ agendamento.endereco }}, {{ agendamento.bairro }}
+- Observações: {{ agendamento.observacao|default:"Nenhuma." }}
+
+Por favor, garanta que seu material esteja pronto no horário agendado.
+
+Acompanhe o status do seu agendamento no seu painel de controle.
+Link: http://127.0.0.1:8000/servicos/lista/
+
+Atenciosamente,
+Sua Equipe de Reciclagem
