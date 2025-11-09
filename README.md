@@ -80,7 +80,7 @@ Se for implantar o projeto em ambiente de nuvem (como Heroku, Railway ou Render)
 ### Tecnologias Utilizadas
 
 * Python 3.13
-* Django 4.x
+* Django 5.2.8
 * HTML5
 * CSS3
 * Bootstrap5 
