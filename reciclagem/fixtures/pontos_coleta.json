@@ -1,0 +1,299 @@
+[
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 1,
+    "fields": {
+      "nome": "UDC Princesa Isabel (Unidade de Destino Certo - Ecoponto)",
+      "endereco": "Av. Ipiranga, 2765",
+      "bairro": "Santana",
+      "telefone": "(51) 3289-6821",
+      "material_reciclavel": ["baterias", "eletrônicos", "garrafas plásticas", "cartuchos de tinta", "espuma de plástico", "lâmpadas"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 2,
+    "fields": {
+      "nome": "Catador Reciclado nossas ideias",
+      "endereco": "Av. Farrapos, 638",
+      "bairro": "Floresta",
+      "telefone": "(51) 98136-3582",
+      "material_reciclavel": ["baterias", "eletrônicos", "espuma de plástico", "garrafas de vidro e plástico", "latas de metal", "materiais domésticos perigosos"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 3,
+    "fields": {
+      "nome": "Ponto de Coleta Reciclus (Hipermercado Carrefour)",
+      "endereco": "Av. Plínio Brasil Milano, 2343",
+      "bairro": "Passo D'Areia",
+      "telefone": "(51) 3004-2222 (Hipermercado)",
+      "material_reciclavel": ["lâmpadas"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 4,
+    "fields": {
+      "nome": "UDC Câncio Gomes (Ecoponto)",
+      "endereco": "Travessa Carmem, 111",
+      "bairro": "Floresta",
+      "telefone": "(51) 3268-8330",
+      "material_reciclavel": ["garrafas plásticas", "lâmpadas"]
+
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 5,
+    "fields": {
+      "nome": "Departamento Municipal de Limpeza Urbana (DMLU)",
+      "endereco": "Av. da Azenha, 631",
+      "bairro": "Azenha",
+      "telefone": "(51) 3289-6999",
+      "material_reciclavel": ["baterias", "eletrônicos", "garrafas plásticas", "cartuchos de tinta", "lâmpadas"]
+   }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 6,
+    "fields": {
+      "nome": "Ecoponto DMLU - Departamento Municipal de Limpeza Urbana",
+      "endereco": "Av. Alberto Bins, s/n",
+      "bairro": "Centro Histórico",
+      "telefone": "(51) 3289-6818",
+      "material_reciclavel": ["garrafas plásticas"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 7,
+    "fields": {
+      "nome": "Coleta Fácil",
+      "endereco": "Rua Santo Alfredo, 516",
+      "bairro": "São José",
+      "telefone": "(51) 99721-4467",
+      "material_reciclavel": ["baterias", "eletrônicos"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 8,
+    "fields": {
+      "nome": "UDC (Unidade de Destino Certo) Carvalho de Freitas",
+      "endereco": "Rua Prof. Carvalho de Freitas, 1012",
+      "bairro": "Glória",
+      "telefone": "(51) 99721-4467",
+      "material_reciclavel": ["garrafas plásticas", "garrafas de vidro", "latas de metal"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 9,
+    "fields": {
+      "nome": "Descarte de móveis",
+      "endereco": "Av. Dr. Nilo Peçanha, 2900",
+      "bairro": "Bela Vista",
+      "telefone": "(51) 99838-1339",
+      "material_reciclavel": ["móveis"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 10,
+    "fields": {
+      "nome": "Izn Logistica Reversa Reciclagem De Eletroeletrônicos",
+      "endereco": "Rua Cruzeiro do Sul, 1445",
+      "bairro": "Cruzeiro do Sul",
+      "telefone": "(51) 3231-6064",
+      "material_reciclavel": ["eletrônicos", "latas de metal"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 11,
+    "fields": {
+      "nome": "RS RECICLA",
+      "endereco": "Rua Voluntários da Pátria, 2987",
+      "bairro": "São João",
+      "telefone": "(51) 3026-2824",
+      "material_reciclavel": ["eletrônicos"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 12,
+    "fields": {
+      "nome": "Ecoponto DMLU Bom Jesus",
+      "endereco": "Rua 25 de Julho, 471",
+      "bairro": "Bom Jesus",
+      "telefone": "(51) 3237-0237",
+      "material_reciclavel": ["garrafas plásticas", "latas de metal"]
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 13,
+    "fields": {
+      "nome": "Destino Certo Cruzeiro do Sul",
+      "endereco": "Rua Alfredo Ferreira Rodrigues, 975",
+      "bairro": "Santa Tereza",
+      "telefone": "(51) 99205-7368",
+      "material_reciclavel": ["vidro", "papelão", "madeira", "caliça", "pedras", "restos de poda"]
+      }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 14,
+    "fields": {
+      "nome": "Rua Cruzeiro do Sul, 1445",
+      "endereco": "Fone: (51) 99205-7368",
+      "telefone": "Apliquim Brasil Recicle"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 15,
+    "fields": {
+      "nome": "Rua Ramiro Barcelos, 630/1317",
+      "endereco": "Fone: (51) 4063-9957",
+      "telefone": "Passarte Porto Alegre"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 16,
+    "fields": {
+      "nome": "Av. Assis Brasil, 2611 3º andar, SUC 337",
+      "endereco": "Fone: (54) 98409-6378",
+      "telefone": "DMLU - Unidade De Serviço Glória"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 17,
+    "fields": {
+      "nome": "Teresópolis",
+      "endereco": "Arco - Gestão de Resíduos",
+      "telefone": "Av. Amazonas, 731"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 18,
+    "fields": {
+      "nome": "Fone: (51) 99191-7447",
+      "endereco": "Move Descarte Inteligente, Energia Sustentável",
+      "telefone": "Rua Padre Maximiliano Kolbe, 187"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 19,
+    "fields": {
+      "nome": "Fone: (51) 3325-9828",
+      "endereco": "Descarte fácil",
+      "telefone": "Rua Progresso, 198"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 20,
+    "fields": {
+      "nome": "Fone: (51) 99727-9349",
+      "endereco": "Embapel Recicláveis",
+      "telefone": "Av. Ricardo Leônidas Ribas, 250"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 21,
+    "fields": {
+      "nome": "Fone: (51) 3249-0100",
+      "endereco": "Seção Centro - DMLU",
+      "telefone": "Rua Múcio Teixeira, 33"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 22,
+    "fields": {
+      "nome": "Coleta Seletiva | COOTRAVIPA",
+      "endereco": "Rua Conselheiro Travassos",
+      "telefone": "(51) 3231-6415"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 23,
+    "fields": {
+      "nome": "",
+      "endereco": "COOPERTEC - Descarte de Lixo Eletrônico",
+      "telefone": "Rua Alegrete, 625"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 24,
+    "fields": {
+      "nome": "Fone: (51) 3342-9200",
+      "endereco": "DMLU - Unidade de Serviço Ipiranga",
+      "telefone": "Av. Ipiranga, 2765"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 25,
+    "fields": {
+      "nome": "Tv. São José, 455",
+      "endereco": "Fone: (51) 98063-5198",
+      "telefone": ""
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 26,
+    "fields": {
+      "nome": "Website",
+      "endereco": "Porto Limp",
+      "telefone": "Av. Francisco Silveira Bitencourt, 1725"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 27,
+    "fields": {
+      "nome": "Fone: (51) 98654-2352",
+      "endereco": "MESSTER",
+      "telefone": "Rua Nicolau Ely, 300"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 28,
+    "fields": {
+      "nome": "Fone: (51) 3392-0022",
+      "endereco": "",
+      "telefone": "DMLU - Estação de Transbordo Lomba do Pinheiro"
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 29,
+    "fields": {
+      "nome": "Depósito de lixo · Estr. Afonso Lourenço Mariante, 4401",
+      "endereco": "Fone: (51) 3289-6812",
+      "telefone": ""
+    }
+  },
+  {
+    "model": "reciclagem.pontocoleta",
+    "pk": 30,
+    "fields": {
+      "nome": "COOPERTINGA",
+      "endereco": "Estr. João Antônio da Silveira, 3240",
+      "telefone": ""
+    }
+  }
+]

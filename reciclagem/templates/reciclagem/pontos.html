@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="container mt-5">
+    <h1>{{ titulo }}</h1>
+    <h3>Pontos de Coleta ({{ pontos|length }})</h3>
+    <table class="table table-bordered table-hover"> <!-- VERIFIQUE A TAG <table> -->
+        <thead>
+            <tr class="table-primary"> <!-- VERIFIQUE A TAG <tr> -->
+                <th>Nome</th>
+                <th>Bairro</th>
+                <th>Endereço</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ponto in pontos %}
+            <tr> <!-- VERIFIQUE A TAG <tr> (Linha do item) -->
+                <td>{{ ponto.nome }}</td> <!-- VERIFIQUE A TAG <td> -->
+                <td>{{ ponto.bairro }}</td>
+                <td>
+                    </td>
+            </tr>
+            {% empty %}
+            {% endfor %}
+        </tbody>
+    </table> <!-- VERIFIQUE O FECHAMENTO </table> -->
+
+    <h3 class="mt-5">Cooperativas ({{ cooperativas|length }})</h3>
+    <table class="table table-bordered table-hover"> <!-- VERIFIQUE A TAG <table> -->
+        <thead>
+            <tr class="table-primary">
+                <th>Nome</th>
+                <th>Bairro</th>
+                <th>Endereço</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cooperativa in cooperativas %}
+            <tr>
+                <td>{{ cooperativa.nome }}</td>
+                <td>{{ cooperativa.bairro }}</td>
+                <td>{{ cooperativa.endereco }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Nenhuma cooperativa encontrada.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

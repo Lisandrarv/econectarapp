@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <div class="card shadow-lg border-success">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">♻️ Ponto de Coleta: {{ ponto.nome }}</h4>
+        </div>
+        
+        <div class="card-body">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>📍 Informações de Localização</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Bairro:</strong> {{ ponto.bairro }}</li>
+                        <li class="list-group-item"><strong>Endereço:</strong> {{ ponto.endereco }}</li>
+                        <li class="list-group-item"><strong>Horário de Funcionamento:</strong> {{ ponto.horario_funcionamento|default:"Não informado" }}</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h6>📦 Materiais e Detalhes</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Materiais Aceitos:</strong> 
+                            <p class="mt-2">{{ ponto.tipos_aceitos|default:"Nenhum material específico listado." }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Observações:</strong> 
+                            <p class="mt-2">{{ ponto.observacao|default:"Nenhuma observação." }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            <a href="{% url 'agendamento:lista_pontos' %}" class="btn btn-secondary">Voltar para a Lista de Pontos</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+  <h2>Serviços de Reciclagem no seu Bairro: {{ bairro }}</h2>
+
+  {% if pontos_proximos %}
+    <h3>Pontos de Coleta Próximos</h3>
+    <ul class="list-group mb-4">
+      {% for ponto in pontos_proximos %}
+        <li class="list-group-item">
+          <strong>{{ ponto.nome }}</strong><br>
+          Endereço: {{ ponto.endereco }}<br>
+          Telefone: {{ ponto.telefone }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="alert alert-info">Nenhum Ponto de Coleta encontrado no seu bairro.</p>
+  {% endif %}
+
+  {% if cooperativas_proximas %}
+    <h3>Cooperativas Próximas</h3>
+    <ul class="list-group">
+      {% for coopera in cooperativas_proximas %}
+        <li class="list-group-item">
+          <strong>{{ coopera.nome }}</strong><br>
+          Endereço: {{ coopera.endereco }}<br>
+          Telefone: {{ coopera.telefone }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="alert alert-info">Nenhuma Cooperativa encontrada no seu bairro.</p>
+  {% endif %}
+
+{% endblock conteudo %}

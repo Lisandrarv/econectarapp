@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block conteudo %}
+<div class="container mt-4">
+    <h2>Pontos de Coleta no Bairro: {{ bairro_usuario|default:"Selecionado" }}</h2>
+    <p class="text-muted">{{ mensagem }}</p>
+
+    <table class="table responsive"> <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nome do Ponto</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Tipos Aceitos</th>
+                <th>Horário de Funcionamento</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for ponto in pontos %}
+            <tr>
+                <td>{{ ponto.nome }}</td>
+                <td>{{ ponto.endereco }}</td>
+                <td>{{ ponto.bairro }}</td>
+                <td>{{ ponto.tipos_aceitos|default:"Não especificado" }}</td>
+                <td>{{ ponto.horario_funcionamento|default:"Não especificado" }}</td>
+                <td>
+                    <a href="{% url 'agendamento:detalhe_ponto' pk=ponto.pk %}" class="btn btn-sm btn-info">
+                    Ver Detalhes
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="5">Aguardando dados de Pontos de Coleta ou Bairro.</td>
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+    
+{% endblock conteudo %}

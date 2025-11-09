@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block conteudo %}
+  <h2>Busca de Materiais Recicláveis</h2>
+  <form method="get" class="mb-3">
+    <div class="form-group d-flex align-items-center">
+      <input type="text" name="q" list="pontos" placeholder="Selecione ou busque materiais" value="{{ query }}" class="form-control w-auto mr-2">
+      <datalist id="pontos">
+        {% for p in pontos %}
+          <option value="{{ p.nome }}">{{ p.endereco }} - {{ p.telefone }} {{ p.bairro }}</option>
+        {% endfor %}
+      </datalist>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+  </form>
+  <ul class="list-group">
+    {% for item in results %}
+      <li class="list-group-item">
+        <strong>{{ item.nome }}</strong>: {{ item.descricao }}
+      </li>
+    {% empty %}
+      <li class="list-group-item">Nenhum material encontrado.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

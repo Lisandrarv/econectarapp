@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block conteudo %}
+<div class="container mt-5">
+    <h2>{{ titulo }}</h2>
+    <hr>
+    
+    <form method="post" class="form">
+        {% csrf_token %}
+
+        {% django_bootstrap5.form form %}
+
+        <button type="submit" class="btn btn-primary">Salvar Cooperativa</button>
+        <a href="{% url 'listar_pontos' %}" class="btn btn-outline-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}
