@@ -27,8 +27,6 @@ interativos, basta clicar nos links abaixo.
 <img src="https://github.com/Lucas-sgarioni/econectar/blob/6299098dafee292e3b2cf0fadc69ebe60553d2c8/assets/img/Meus%20agendamentos.png">
 <img src="https://github.com/Lucas-sgarioni/econectar/blob/6299098dafee292e3b2cf0fadc69ebe60553d2c8/assets/img/Minhas%20reciclagens.png">
 <img src="https://github.com/Lucas-sgarioni/econectar/blob/6299098dafee292e3b2cf0fadc69ebe60553d2c8/assets/img/Fluxo%20das%20telas.png">
-<img src="">
-<img src="">
 </div>
 
 ### ⚙️ Pré-requisitos:
